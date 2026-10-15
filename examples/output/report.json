@@ -1,0 +1,76 @@
+{
+  "after": {
+    "name": "synthetic-after",
+    "num_qubits": 4
+  },
+  "before": {
+    "name": "synthetic-before",
+    "num_qubits": 4
+  },
+  "interpretation": "A missing directed pair means the requested CX is not listed as native for that ordered physical-qubit pair in this snapshot. It does not imply that a circuit cannot be executed: a compiler may use routing, direction reversal, or decomposition when the target instruction set permits it.",
+  "native_cx_changes": {
+    "added": [
+      [
+        2,
+        1
+      ]
+    ],
+    "removed": [
+      [
+        1,
+        2
+      ]
+    ]
+  },
+  "schema_version": 1,
+  "workload_summary": {
+    "classification": "REGRESSION",
+    "unavailable_operation_occurrences_after": 2,
+    "unavailable_operation_occurrences_before": 1,
+    "workload_count": 2
+  },
+  "workloads": [
+    {
+      "became_available_after": [],
+      "became_unavailable_after": [
+        [
+          1,
+          2
+        ]
+      ],
+      "classification": "REGRESSION",
+      "id": "fixed-mapping-a",
+      "missing_native_cx_after": [
+        [
+          1,
+          2
+        ]
+      ],
+      "missing_native_cx_before": [],
+      "operation_count": 2,
+      "unavailable_operation_occurrences_after": 1,
+      "unavailable_operation_occurrences_before": 0
+    },
+    {
+      "became_available_after": [],
+      "became_unavailable_after": [],
+      "classification": "UNCHANGED",
+      "id": "fixed-mapping-b",
+      "missing_native_cx_after": [
+        [
+          3,
+          2
+        ]
+      ],
+      "missing_native_cx_before": [
+        [
+          3,
+          2
+        ]
+      ],
+      "operation_count": 2,
+      "unavailable_operation_occurrences_after": 1,
+      "unavailable_operation_occurrences_before": 1
+    }
+  ]
+}

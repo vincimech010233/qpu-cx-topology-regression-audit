@@ -1,0 +1,4 @@
+[
+  {"id": "fixed-mapping-a", "operations": [[0, 1], [1, 2]]},
+  {"id": "fixed-mapping-b", "operations": [[2, 3], [3, 2]]}
+]

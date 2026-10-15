@@ -1,0 +1,5 @@
+{
+  "name": "synthetic-after",
+  "num_qubits": 4,
+  "native_cx": [[0, 1], [1, 0], [2, 1], [2, 3]]
+}

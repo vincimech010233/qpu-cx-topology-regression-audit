@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "qpu-cx-topology-regression-audit"
+version = "1.0.0"
+description = "Offline audit of changes to native directed CX connectivity against fixed physical workloads"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+authors = [{name = "vincimech010233"}]
+dependencies = []
+
+[project.scripts]
+qpu-cx-audit = "qpu_cx_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
