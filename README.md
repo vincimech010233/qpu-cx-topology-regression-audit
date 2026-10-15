@@ -90,7 +90,7 @@ Run the deterministic standard-library test suite from this directory:
 PYTHONDONTWRITEBYTECODE=1 PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-**Actual test result:** 18 tests passed with Python 3.12.3 in the workspace and in the `python:3.12-slim-bookworm` container. The container ran as UID/GID 65534 with networking disabled, a read-only root filesystem, a read-only project mount, and a temporary `/tmp`. A wheel also built successfully with `pip wheel --no-deps --no-build-isolation`; no package was installed globally.
+**Actual test result:** 18 tests passed with Python 3.12.3 in the workspace and in the `python:3.12-slim-bookworm` container. The container ran as UID/GID 65534 with networking disabled, a read-only root filesystem, a read-only project mount, one CPU, a 512 MiB memory limit, and a temporary `/tmp`. GitHub Actions also passed all four Python matrix jobs (3.10, 3.11, 3.12, 3.13) for commit `6541cfe612844c6307f7ee25ef91009a658e29af`. A wheel built successfully with `pip wheel --no-deps --no-build-isolation`; no package was installed globally.
 
 No external test service is required. A GitHub Actions workflow runs the same suite on pushes and pull requests using Python 3.10–3.13.
 
